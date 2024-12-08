@@ -1,5 +1,6 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    background-color: #f8f9fa;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
     background-color: #f4f4f4;
     color: #333;
     line-height: normal;
@@ -91,7 +92,8 @@ body {
     width: 100%;
     border-collapse: collapse;
 }
-.content .table-container table th, .content .table-container table td {
+.content .table-container table th,
+.content .table-container table td {
     padding: 10px;
     border: 1px solid #dee2e6;
     text-align: left;

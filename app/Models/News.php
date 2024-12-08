@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class News extends Model
 {
-    
+
     use HasFactory;
-    
+
     protected $table = 'news';
     protected $fillable = [
         'slug',
@@ -22,11 +22,8 @@ class News extends Model
         'category_id',
     ];
 
-    public function category() : BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 }
-
-
-

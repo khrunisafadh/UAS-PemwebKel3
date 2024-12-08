@@ -27,13 +27,12 @@
         @else
             @foreach ($data as $new)
                 <div class="card">
-                    <a href="/" class="news-item">
+                    <a href="/category/{{ $new->category->name }}/{{ $new->slug }}" class="news-item">
                         <img src="images/home1.png" alt="berita 1" width="100" height="100">
                         <div class="news-content">
                             <h3><b>{{ $new->title }}</b></h3>
                             <p>{{ Str::limit($new->content, 100) }} </p>
-                            <p>{{ $new->created_at->diffForHumans() }}</p>
-
+                            <p>{{ $new->author }} | {{ $new->created_at->diffForHumans() }}</p>
                         </div>
                     </a>
                 </div>
