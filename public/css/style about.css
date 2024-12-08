@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: normal;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container2 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*header ada di style css header*/
+
+
+/* isi konten */
+
+h1 {
+    color: #4a4a4a;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-section,
+.team-section {
+    width: 100%;
+}
+
+.about-section {
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.about-section h1 {
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.team-section {
+    margin-top: 20px;
+}
+
+.team-section h2 {
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #4a4a4a;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsif dengan ukuran minimum 150px */
+    gap: 20px;
+    justify-content: center;
+    align-items: start; /* Semua elemen tim disejajarkan ke atas */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Rata tengah gambar, nama, dan jabatan */
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    width: 120px; /* Ukuran gambar yang konsisten */
+    height: 120px; /* Sesuai dengan lebar agar tetap proporsional */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    margin-bottom: 10px; /* Jarak bawah antara gambar dan teks */
+}
+
+.team-member h3 {
+    color: #333;
+    font-size: 16px; /* Ukuran font yang seragam */
+    margin: 5px 0; /* Jarak atas dan bawah untuk teks */
+}
+
+.team-member p {
+    color: #666;
+    font-size: 14px; /* Ukuran font lebih kecil untuk jabatan */
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .team-members {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section p {
+        font-size: 14px;/
+    }
+}
+
+/*footer ada di style css footer*/

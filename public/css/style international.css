@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; 
+    color: #333;
+    line-height: normal;
+    font-size: 16px; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.container2 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*header ada di style css header*/
+
+
+/* isi konten */
+
+.hero {
+    background-image: url('international\ news.avif');
+    background-image: url('/images/international\ news.avif');
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    padding: 100px 0; 
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hero .btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #c0392b;
+}
+
+.main-content {
+    margin: 5px auto;
+    background-color: #ffffff;
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; 
+}
+
+.meta-info {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 15px; /* Margin atas dan bawah */
+}
+
+.meta-info p {
+    margin: 5px 0; /* Spasi antar baris */
+}
+
+.slider-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.slider {
+    display: flex; 
+    gap: 20px; 
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; 
+}
+
+.card.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.card.animate {
+    transform: translateY(-20px); 
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+    background: #2980b9;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/*footer ada di style css footer*/

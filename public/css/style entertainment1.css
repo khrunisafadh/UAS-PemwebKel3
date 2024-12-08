@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: normal;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.container2 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*header ada di style css header*/
+
+
+/* isi konten */
+
+.hero {
+    background-image: url('/images/entertainment1.jpeg');
+    background-size: 60%; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    color: white; 
+    padding: 100px 20px;
+    min-height: 300px; 
+}
+
+
+.card {
+    background: #e7e7eb;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.news-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Konten utama lebih besar dari kolom kanan */
+    gap: 20px;
+}
+
+.main-article {
+    border-right: 1px solid #ddd; /* Pemisah */
+    padding-right: 20px;
+    text-align: justify;
+    margin-left: 30px;
+}
+
+.main-article h2 {
+    text-align: center;
+    margin-top: 17px;
+}
+
+.related-articles {
+    padding-left: 20px;
+}
+
+.related-articles h3 {
+    font-size: 24px;
+    margin-top: 40%;
+    margin-bottom: 15px;
+}
+
+.related-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.related-item img {
+    margin-right: 10px;
+    border-radius: 5px; /* Agar gambar terlihat lebih menarik */
+}
+
+.related-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.related-item a:hover {
+    text-decoration: blink;
+    color: #380707; /* Efek hover */
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.news-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+a.news-item {
+    text-decoration: none;
+    color: inherit;
+}
+a.news-item:hover {
+    background-color: #f0f0f0; /* Memberi efek hover */
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    margin: 0;
+}
+
+/*footer ada di style css footer*/
