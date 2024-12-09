@@ -5,9 +5,6 @@
     <x-nav-bar />
 
     {{ $slot }}
-
-
-
     <script src="js/animasi.js"></script>
 </body>
 

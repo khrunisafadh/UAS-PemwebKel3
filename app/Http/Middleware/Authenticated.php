@@ -21,6 +21,6 @@ class Authenticated
             return $next($request);
         }
 
-        return back();
+        return redirect('/login');
     }
 }

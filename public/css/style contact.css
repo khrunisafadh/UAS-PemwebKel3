@@ -130,4 +130,22 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.contact-section {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+}
+
+.contact-form-container {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.map-container {
+    flex: 1; 
+}
+
 /*footer ada di style css footer*/

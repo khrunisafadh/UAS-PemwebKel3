@@ -16,28 +16,28 @@ class CategorySeeder extends Seeder
 
         DB::table('category')->insert([
             [
-                'name' => 'National',
+                'name' => 'Nasional',
             ],
             [
-                'name' => 'International',
+                'name' => 'Internasional',
             ],
             [
-                'name' => 'Sport',
+                'name' => 'Olahraga',
             ],
             [
-                'name' => 'Politic',
+                'name' => 'Politik',
             ],
             [
-                'name' => 'LifeStyle',
+                'name' => 'Gaya Hidup',
             ],
             [
-                'name' => 'Technology',
+                'name' => 'Teknologi',
             ],
             [
-                'name' => 'Art',
+                'name' => 'Seni',
             ],
             [
-                'name' => 'Entertainment',
+                'name' => 'Hiburan',
             ],
         ]);
     }

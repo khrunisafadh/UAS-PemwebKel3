@@ -94,6 +94,7 @@ body {
   width: 100%;
 }
 
+
 /* Untuk layar lebih kecil (mobile) */
 @media screen and (max-width: 768px) {
   .footer-container {
