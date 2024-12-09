@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
 
+use function PHPUnit\Framework\returnSelf;
+
 class DashboardController extends Controller
 {
 
@@ -57,12 +59,41 @@ class DashboardController extends Controller
         return view('adminindex', ['data' => $news]);
     }
 
-    public function editNew($id): View
+    public function showEditNew($id): View
     {
         $new = News::where('id', $id)->first();
         $category = Category::all();
 
         return view('editNew', ['berita' => $new, 'categories' => $category]);
+    }
+
+    public function EditNew($id, Request $request)
+    {
+
+        $request->validate([
+            'title' => 'required',
+            'author' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'konten' => 'required',
+            'category_id' => 'required'
+        ]);
+
+
+        $imageName = time() . '.' . $request->image->extension();
+
+        $request->image->move(public_path('images'), $imageName);
+
+
+        News::where('id', $id)->update([
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'author' => $request->author,
+            'content' => $request->konten,
+            'image' => $imageName,
+            'category_id' => $request->category_id
+        ]);
+
+        return redirect('/dashboard')->with('edit-success', 'Berhasil mengedit berita');
     }
 
     public function deleteNew(Request $request): RedirectResponse
@@ -76,7 +107,7 @@ class DashboardController extends Controller
         $new->delete();
 
 
-        return back();
+        return redirect('/dashboard')->with('delete-success', 'Berhasil menhapus berita');
     }
 
     public function logout(Request $request): RedirectResponse
@@ -120,6 +151,6 @@ class DashboardController extends Controller
             'category_id' => $request->category_id
         ]);
 
-        return back();
+        return back()->with('succes-edit', 'Berhasil menambah berita');
     }
 }

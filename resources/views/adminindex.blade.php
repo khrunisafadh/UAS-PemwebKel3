@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    @if (session('edit-success'))
+        berhasil mengedit
+    @endif
     <div class="sidebar h-full fixed z-50 left-0 -translate-x-[500px] transition-all" id="sideBar">
         <h2>ADMINISTRATOR</h2>
         <div class="user-info">
@@ -31,7 +34,6 @@
         </div>
         <ul class="menu">
             <li><a class="active" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li><a href="/dashboard/add"><i class="fas fa-newspaper"></i> Tambah Berita</a></li>
             <li>
                 <form action="/logout" method="POST">
                     @csrf
@@ -54,11 +56,18 @@
                 <h1>Dashboard Admin</h1>
             </div>
             <div class="table-container">
-                <h2>Semua Berita</h2>
+
+                <section class="my-6 flex justify-between items-center">
+                    <h2>Semua Berita</h2>
+                    <a href="/dashboard/add"
+                        class="px-5 py-2 bg-gray-400 rounded-lg hover:bg-gray-500 text-white">Tambah
+                        Berita</a>
+                </section>
                 <table id="table-kategori" class="display" style="width: 1000px">
                     <thead>
                         <th>No</th>
                         <th>Title</th>
+                        <th>image</th>
                         <th>Content</th>
                         <th>Kategori</th>
                         <th>Action</th>
@@ -67,11 +76,12 @@
                         @foreach ($data as $new)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td><img src="{{ url('images/' . $new->image) }}" alt=""></td>
                                 <td>{{ $new->title }}</td>
                                 <td>{!! Str::limit($new->content, 100) !!}</td>
                                 <td>{{ $new->category->name }}</td>
                                 <td>
-                                    <section class="flex gap-5">
+                                    <section class="flex gap-5 justify-center">
                                         <a href="/dashboard/edit/{{ $new->id }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20"
                                                 height="20" viewBox="0 0 50 50">

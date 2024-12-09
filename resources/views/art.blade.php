@@ -25,7 +25,7 @@
 
             @foreach ($data as $new)
                 <div class="card animate">
-                    <img src="images/art1.jpg" alt="Art 1">
+                    <img src="{{ url('images/' . $new->image) }}" alt="Art 1">
                     <h3>{{ $new->title }}</h3>
                     <div class="meta-info">
                         <p>{{ $new->author }} | {{ $new->created_at->diffForHumans() }}</p>
