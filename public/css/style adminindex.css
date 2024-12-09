@@ -9,14 +9,18 @@ body {
 }
 .container {
     display: flex;
+    flex-direction: row; /* Pastikan arah fleksibel horizontal */
+    min-height: 100vh;  /* Agar kontainer mengikuti tinggi layar */
 }
 .sidebar {
     width: 250px;
-    background-color: #343a40;
+    background-color: #2c3e50;
     color: #fff;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    flex: 0 0 250px; /* Sidebar dengan lebar tetap */
+    height: 100vh;
 }
 .sidebar h2 {
     font-size: 18px;
@@ -60,8 +64,9 @@ body {
     border-radius: 5px;
 }
 .content {
-    flex: 1;
-    padding: 20px;
+    flex: 1;         /* Konten mengambil sisa ruang */
+    padding: 20px;   /* Tambahkan padding untuk estetika */
+    overflow: auto;
 }
 .content .header {
     display: flex;

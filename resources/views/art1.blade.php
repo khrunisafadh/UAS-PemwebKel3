@@ -10,11 +10,6 @@
         <section class="main-article">
             <article>
                 <h2>Indonesia Akan Terus Dorong Pencatatan Warisan Budaya ke UNESCO<br><br></h2>
-                <div class="article-meta">
-                    <p><strong>Penulis:</strong> Fadli Zon</p>
-                    <p><strong>Waktu Rilis:</strong> 26 November 2024</p>
-                </div>
-                <br>
                 <p>Menteri Kebudayaan, Fadli Zon menyebut pihaknya akan terus berkomitmen mendorong pencatatan warisan budaya UNESCO. Menurutnya, itu jadi salah satu dari empat tugas lembaga yang ia pimpin dalam memajukan kebudayaan.
                     Tugas tersebut didasarkan pada UU No. 5 tahun 2017 tentang Pemajuan Kebudayaan yang membuat Kementerian Kebudayaan bertugas untuk Pelindungan, Pengembangan, Pemanfaatan, dan Pembinaan Kebudayaan.
                     <br><br>

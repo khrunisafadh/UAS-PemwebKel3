@@ -54,6 +54,19 @@ body {
     gap: 20px;
 }
 
+.article-meta {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    /*margin: 10px 0 20px; /* Tambahkan margin atas dan bawah */
+    font-size: 14px;
+    color: #555;
+}
+
+.article-meta p {
+    margin: 5px 0;
+}
+
 .main-article {
     border-right: 1px solid #ddd; /* Pemisah */
     padding-right: 20px;

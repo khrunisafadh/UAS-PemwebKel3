@@ -37,7 +37,7 @@
         <div class="footer-section">
           <h4><b>IKUTI KAMI</b></h4>
             <div class="social-icons flex">
-              <a href="https://www.instagram.com/sisforbrilliance_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <a href="https://www.instagram.com/sisforbrilliance_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                 <img class="bw" src="{{ asset('/images/icon_ig_b&w.png') }}" alt="Instagram" />
                 <img class="color" src="{{ asset('/images/icon_ig.png') }}" alt="Instagram" />
               </a>
@@ -49,7 +49,7 @@
       </div>
       
       <div class="copyright">
-      <p>© 2024 Cakara News. Hak cipta dilindungi undang-undang.</>
+      <p>© 2024 Cakara News. Hak cipta dilindungi undang-undang.</p>
       </div>
     </div>
   </footer>

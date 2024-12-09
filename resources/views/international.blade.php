@@ -38,9 +38,8 @@
                 <div class="meta-info">
                     <p>Tim Redaksi | 3 Desember 2024</p>
                 </div>
-                <p>Jaksa ICC, Karim A.A. Khan KC, mengumumkan pengajuan permohonan surat penangkapan terkait situasi di Palestina. 
-                   Langkah ini menegaskan komitmen ICC untuk menangani dugaan kejahatan dan memastikan akuntabilitas. Khan menekankan 
-                   pentingnya keadilan bagi korban dan perlunya kerja sama dengan negara-negara terkait. Pernyataan ini menyoroti upaya yang 
+                <p>Jaksa ICC, Karim A.A. Khan KC, mengumumkan pengajuan permohonan surat penangkapan terkait situasi di Palestina.
+                    Khan menekankan pentingnya keadilan bagi korban dan perlunya kerja sama dengan negara-negara terkait. Pernyataan ini menyoroti upaya yang 
                    sedang berlangsung untuk menegakkan hukum internasional di tengah dinamika geopolitik yang kompleks.</p>
                 <a href="/international2" class="btn">Selengkapnya</a>
             </div>

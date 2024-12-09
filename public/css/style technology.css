@@ -86,15 +86,6 @@ body {
     gap: 20px;
 }
 
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
 .card img {
     width: 100%;
     border-radius: 8px;
@@ -105,21 +96,43 @@ body {
     margin-bottom: 10px;
 }
 
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Teks tetap rata kiri */
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px); 
+    
+}
+
 .card p {
     margin-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    flex-grow: 1;
 }
 
 .card .btn {
     background: #3498db;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 20px; 
     border-radius: 4px;
     text-decoration: none;
+    text-align: center;
+    display: inline-block; 
     transition: background 0.3s ease;
+    width: auto;
 }
 
 .card .btn:hover {
-    background: #2980b9;
+    background: #c0392b;
 }
 
 .card:hover {

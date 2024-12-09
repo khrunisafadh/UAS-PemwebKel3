@@ -17,7 +17,7 @@
 
     <section class="hero">
         <h2><b>Berita Nasional</b></h2>
-        <p>Jelajahi berita terbaru dan pembaruan dari seluruh dunia.</p>
+        <p>Jelajahi berita terbaru dan pembaruan dari seluruh Indonesia.</p>
     </section>
     
     <section class="main-content container2">
@@ -50,9 +50,7 @@
                     <p>Tim Redaksi | 2 Desember 2024</p>
                 </div>
                 <p>Pada tanggal 10 Oktober, diperingati sebagai Hari Kesehatan Mental Sedunia. Hari ini bertujuan untuk meningkatkan kesadaran tentang
-                     pentingnya kesehatan mental serta memberikan dukungan kepada mereka yang mengalami masalah kesehatan mental. Setiap tahun, berbagai 
-                     tema diangkat untuk mendorong dialog dan pendidikan seputar isu-isu ini, membantu menghilangkan stigma yang sering terkait dengan 
-                     kesehatan mental​</p>
+                     pentingnya kesehatan mental serta memberikan dukungan kepada mereka yang mengalami masalah kesehatan mental. ​</p>
                 <a href="/national3" class="btn">Selengkapnya</a>
             </div>
         </div>

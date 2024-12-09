@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
             'is_admin' => true
         ]);
 
-        News::factory()->count(1000)->create();
+        // News::factory()->count(1000)->create();
     }
 }

@@ -102,9 +102,13 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left; /* Teks tetap rata kiri */
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0; 
+    opacity: 0;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    justify-content: space-between; /* Menjaga jarak antar elemen */
+    height: 100%;
 }
 
 .card.show {
@@ -128,19 +132,25 @@ body {
 
 .card p {
     margin-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    flex-grow: 1;
 }
 
 .card .btn {
     background: #3498db;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 20px; 
     border-radius: 4px;
     text-decoration: none;
+    text-align: center;
+    display: inline-block; 
     transition: background 0.3s ease;
+    width: auto;
 }
 
 .card .btn:hover {
-    background: #2980b9;
+    background: #c0392b;
 }
 
 .card:hover {

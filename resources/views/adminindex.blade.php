@@ -13,27 +13,29 @@
     <script src="scriptsearch.js" defer></script>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>ADMINISTRATOR</h2>
-        <div class="user-info">
-            <img src="https://storage.googleapis.com/a1aa/image/0UrnHIec5uXMLSqyHUQEsUiPSk0Q3TC20YHtlq4Fl6cLMD8JA.jpg" alt="User profile picture" height="40" width="40">
-            <div>
-                <div>Digital Jessie</div>
-                <div class="status">Online</div>
-            </div>
-        </div>
-        <ul class="menu">
-            <li><a class="active" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li><a href="/adminpanel"><i class="fas fa-newspaper"></i> Tambah Berita</a></li>
-            <li>
-                <form action="/logout">
-                    @csrf
-                    <button type="submit" href="/l"><i class=""></i> Logout</button>
-                </form>
-            </li>
-        </ul>
-    </div>
     <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>ADMINISTRATOR</h2>
+            <div class="user-info">
+                <img src="https://storage.googleapis.com/a1aa/image/0UrnHIec5uXMLSqyHUQEsUiPSk0Q3TC20YHtlq4Fl6cLMD8JA.jpg" alt="User profile picture" height="40" width="40">
+                <div>
+                    <div>Admin Rahel</div>
+                    <div class="status">Online</div>
+                </div>
+            </div>
+            <ul class="menu">
+                <li><a class="active" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="/adminpanel"><i class="fas fa-newspaper"></i> Tambah Berita</a></li>
+                <li>
+                    <form action="/logout">
+                        <button type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content -->
         <div class="content">
             <div class="header">
                 <h1>Dashboard Admin</h1>
@@ -137,11 +139,7 @@
                     </ul>
                 </div>
             </div>
-            
         </div>
-    </div>
-    <div class="footer">
-        © 2014-2020 Portal Berita Pro | Portal Media Online International. All rights reserved.
     </div>
 </body>
 </html>

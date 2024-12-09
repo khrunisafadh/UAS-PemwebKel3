@@ -90,8 +90,15 @@ body {
     resize: vertical;
 }
 
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px; 
+    color: #999;
+}
+
 .submit-btn {
-    background: #e74c3c;
+    background: #3498db;
     color: #fff;
     padding: 12px 30px;
     border: none;
@@ -100,6 +107,11 @@ body {
     font-size: 16px;
     font-weight: 600;
     transition: background 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: #3498db;
 }
 
 .submit-btn:hover {

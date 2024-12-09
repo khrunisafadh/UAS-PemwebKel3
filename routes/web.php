@@ -194,6 +194,22 @@ Route::get('/politic5', function () {
     return view('politic5');
 });
 
+Route::get('/entertainment1', function () {
+    return view('entertainment1');
+});
+Route::get('/entertainment2', function () {
+    return view('entertainment2');
+});
+Route::get('/entertainment3', function () {
+    return view('entertainment3');
+});
+Route::get('/entertainment4', function () {
+    return view('entertainment4');
+});
+Route::get('/entertainment5', function () {
+    return view('entertainment5');
+});
+
 
 
 Route::middleware([Authenticated::class])->group(function () {
