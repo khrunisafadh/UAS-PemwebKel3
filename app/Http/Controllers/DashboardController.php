@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\News;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -54,6 +55,25 @@ class DashboardController extends Controller
         return view('adminindex', ['data' => $news]);
     }
 
+    public function editNew($id)
+    {
+        $new = News::where('id', $id)->first();
+        $category = Category::all();
+
+        return view('editNew', ['berita' => $new, 'categories' => $category]);
+    }
+
+    public function deleteNew(Request $request)
+    {
+        $request->validate([
+            'id' => 'required'
+        ]);
+
+        News::where('id', $request->id);
+
+        return back();
+    }
+
     public function logout(Request $request): RedirectResponse
     {
         Auth::logout();
@@ -65,5 +85,9 @@ class DashboardController extends Controller
         return redirect('/');
     }
 
-    public function dashboardEdit($kategori, $id) {}
+    public function showAddNew()
+    {
+        $category = Category::all();
+        return view('adminpanel', ['categories' => $category]);
+    }
 }

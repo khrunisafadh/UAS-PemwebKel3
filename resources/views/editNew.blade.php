@@ -24,7 +24,7 @@
                 <img src="https://storage.googleapis.com/a1aa/image/0UrnHIec5uXMLSqyHUQEsUiPSk0Q3TC20YHtlq4Fl6cLMD8JA.jpg"
                     alt="User profile picture" height="40" width="40">
                 <div>
-                    <div>{{ Auth::user()->name }}</div>
+                    <div>Digital Jessie</div>
                     <div class="status">Online</div>
                 </div>
             </div>
@@ -40,32 +40,37 @@
             </ul>
         </div>
 
-        <div class="content flex justify-start flex-col items-center w-full">
+        <div class="content flex justify-center flex-col items-center w-full">
             <div class="header">
                 <h1>Edit Berita</h1>
             </div>
-            <div class="w-full">
-                <form action="" method="POST">
+            <div class="form-container">
+                <form action="/berita/{{ $berita->id }}" method="POST">
                     @csrf
-                    <div class="flex flex-col mb-5">
-                        <label for="title" class="font-semibold text-xl mb-2">Judul Berita</label>
-                        <input type="text" name="title" id="title" class="px-4 py-2 w-full rounded-lg">
+                    @method('PUT')
+                    <div class="form-group">
+                        <label for="title">Judul Berita:</label>
+                        <input type="text" id="title" name="title" class="form-control"
+                            value="{{ $berita->title }}" required>
                     </div>
-                    <div class="flex flex-col mb-5">
-                        <label for="author" class="font-semibold text-xl mb-2">Author</label>
-                        <input type="text" name="author" id="author" class="px-4 py-2 w-full rounded-lg">
+                    <div class="form-group">
+                        <label for="content">Isi Berita:</label>
+                        <textarea id="content" name="content" rows="5" class="form-control" required>{{ $berita->content }}</textarea>
                     </div>
-                    <div class="flex flex-col mb-5">
-                        <label for="content" class="font-semibold text-xl mb-2">Isi berita</label>
-                        <textarea name="content" id="content" cols="30" rows="10" class="resize-none rounded-lg p-3">Isi Berita</textarea>
-                    </div>
-                    <div class="flex flex-col mb-5">
-                        <label for="content" class="font-semibold text-xl mb-2">Category</label>
-                        <select name="category_id" id="category_id" class="h-12 p-2 rounded-lg">
+                    <div class="form-group">
+                        <label for="category">Kategori:</label>
+                        <select id="category" name="category_id" class="form-control" required>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}"
+                                    {{ $berita->category_id == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}
+                                </option>
                             @endforeach
                         </select>
+                    </div>
+                    <div class="form-group flex justify-between">
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        <a href="/dashboard" class="btn btn-secondary">Batal</a>
                     </div>
                 </form>
             </div>

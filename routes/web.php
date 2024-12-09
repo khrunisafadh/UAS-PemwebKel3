@@ -7,6 +7,7 @@ use App\Http\Middleware\AdminAuthenticated;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Middleware\UnAuthenticated;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -40,6 +41,8 @@ Route::middleware([Authenticated::class])->group(function () {
     Route::middleware([AdminAuthenticated::class])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'showDashboard']);
 
-        Route::get('/dashboard/{kategori}/{id}', [DashboardController::class, 'dashboardEdit']);
+        Route::get('/dashboard/add', [DashboardController::class, 'showAddNew']);
+        Route::get('/dashboard/edit/{id}', [DashboardController::class, 'editNew']);
+        Route::post('/dashboard/delete', [DashboardController::class, 'deleteNew']);
     });
 });
