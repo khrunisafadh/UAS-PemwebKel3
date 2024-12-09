@@ -55,7 +55,7 @@
             </div>
             <div class="table-container">
                 <h2>Semua Berita</h2>
-                <table id="table-kategori" class="display" style="width:100%">
+                <table id="table-kategori" class="display" style="width: 1000px">
                     <thead>
                         <th>No</th>
                         <th>Title</th>
@@ -68,7 +68,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $new->title }}</td>
-                                <td>{{ Str::limit($new->content, 100) }}</td>
+                                <td>{!! Str::limit($new->content, 100) !!}</td>
                                 <td>{{ $new->category->name }}</td>
                                 <td>
                                     <section class="flex gap-5">

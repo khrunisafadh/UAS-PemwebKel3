@@ -30,7 +30,7 @@
                     <div class="meta-info">
                         <p>{{ $new->author }} | {{ $new->created_at->diffForHumans() }}</p>
                     </div>
-                    <p>{{ $new->content }}</p>
+                    <p>{!! $new->content !!}</p>
                     <a href="/category/{{ $new->category->name }}/{{ $new->slug }}" class="btn">Selengkapnya</a>
                 </div>
             @endforeach

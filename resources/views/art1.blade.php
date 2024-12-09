@@ -1,10 +1,17 @@
 <x-lay-outheader>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     <link rel="stylesheet" href="{{ asset('/css/style art1.css') }}">
 </x-lay-outheader>
 
 
 <x-lay-out>
+
+
+    <section class="card">
+        <div class="hero" style="background-image: url({{ url('images/' . $data->image) }})">
+        </div>
+    </section>
+
     <main class="news-layout">
         <!-- Konten berita utama -->
         <section class="main-article">
@@ -15,7 +22,7 @@
                     <p><strong>Waktu Rilis:</strong> {{ $data->created_at->diffForHumans() }}</p>
                 </div>
                 <br>
-                <p>{{ $data->content }}</p>
+                <p>{!! $data->content !!}</p>
             </article>
         </section>
 
@@ -24,7 +31,8 @@
             <h3>Berita Serupa</h3>
             @foreach ($news as $new)
                 <div class="related-item">
-                    <img src="images/{{ $new->slug }}.png" alt="{{ $new->id }}.jpg" width="50" height="50">
+                    <img src="{{ url('images/' . $new->image) }}" alt="{{ $new->id }}.jpg" width="50"
+                        height="50">
                     <a href="/category/{{ $new->category->name }}/{{ $new->slug }}">{{ $new->title }}</a>
                 </div>
             @endforeach

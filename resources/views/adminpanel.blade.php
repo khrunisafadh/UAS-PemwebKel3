@@ -41,7 +41,7 @@
             </div>
             <ul class="menu">
                 <li><a href="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                <li><a href="/adminpanel"><i class="fas fa-newspaper"></i> Tambah Berita</a></li>
+                <li><a href="/dashboard/add"><i class="fas fa-newspaper"></i> Tambah Berita</a></li>
                 <li>
                     <form action="/logout" method="POST">
                         @csrf
@@ -56,7 +56,8 @@
                 <h1>Edit Berita</h1>
             </div>
             <div class="w-full">
-                <form action="{{ url('/dashboard/add') }}" method="POST" onsubmit="return handleSubmit(event)">
+                <form action="{{ url('/dashboard/add') }}" method="POST" onsubmit="return handleSubmit(event)"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="flex flex-col mb-5">
                         <label for="title" class="font-semibold text-xl mb-2">Judul Berita</label>
@@ -67,6 +68,11 @@
                         <label for="author" class="font-semibold text-xl mb-2">Author</label>
                         <input type="text" name="author" id="author"
                             class="px-4 py-2 w-full rounded-lg bg-none border" required>
+                    </div>
+                    <div class="flex flex-col mb-5">
+                        <label for="image" class="font-semibold text-xl mb-2">Author</label>
+                        <input type="file" name="image" id="image" class="px-4 py-2 w-full rounded-lg bg-white"
+                            required>
                     </div>
                     <div class="flex flex-col mb-5">
                         <label for="content" class="font-semibold text-xl mb-2">Isi berita</label>
@@ -110,7 +116,7 @@
                     }, {
                         list: 'bullet'
                     }],
-                    ['link', 'image']
+                    ['link']
                 ]
             }
         });

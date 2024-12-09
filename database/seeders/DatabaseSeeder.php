@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call(CategorySeeder::class);
-        
+
         User::factory()->create([
             'name' => 'TestUser',
             'email' => 'test@example.com',
             'is_admin' => true
         ]);
 
-        News::factory()->count(1000)->create();
+        // News::factory()->count(1000)->create();
     }
 }
