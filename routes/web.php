@@ -42,6 +42,7 @@ Route::middleware([Authenticated::class])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'showDashboard']);
 
         Route::get('/dashboard/add', [DashboardController::class, 'showAddNew']);
+        Route::post('/dashboard/add', [DashboardController::class, 'addNews']);
         Route::get('/dashboard/edit/{id}', [DashboardController::class, 'editNew']);
         Route::post('/dashboard/delete', [DashboardController::class, 'deleteNew']);
     });

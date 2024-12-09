@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('content');
-            $table->string('image')->nullable();
+            $table->json('image')->nullable();
             $table->string('author');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');

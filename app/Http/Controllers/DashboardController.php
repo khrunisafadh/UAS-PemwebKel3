@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\News;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,12 +13,12 @@ use Illuminate\Support\Facades\Redirect;
 class DashboardController extends Controller
 {
 
-    public function showLogin()
+    public function showLogin(): View
     {
         return view('login');
     }
 
-    public function Authenticated(Request $request)
+    public function Authenticated(Request $request): RedirectResponse
     {
         // dd($request);
 
@@ -37,7 +38,7 @@ class DashboardController extends Controller
         ])->onlyInput('email');
     }
 
-    public function login(Request $request)
+    public function login(Request $request): RedirectResponse
     {
         Auth::logout();
 
@@ -48,14 +49,14 @@ class DashboardController extends Controller
         return redirect('/');
     }
 
-    public function showDashboard()
+    public function showDashboard(): View
     {
         $news = News::get();
 
         return view('adminindex', ['data' => $news]);
     }
 
-    public function editNew($id)
+    public function editNew($id): View
     {
         $new = News::where('id', $id)->first();
         $category = Category::all();
@@ -63,7 +64,7 @@ class DashboardController extends Controller
         return view('editNew', ['berita' => $new, 'categories' => $category]);
     }
 
-    public function deleteNew(Request $request)
+    public function deleteNew(Request $request): RedirectResponse
     {
         $request->validate([
             'id' => 'required'
@@ -85,9 +86,14 @@ class DashboardController extends Controller
         return redirect('/');
     }
 
-    public function showAddNew()
+    public function showAddNew(): View
     {
         $category = Category::all();
         return view('adminpanel', ['categories' => $category]);
+    }
+
+    public function addNews(Request $request)
+    {
+        dd($request);
     }
 }
